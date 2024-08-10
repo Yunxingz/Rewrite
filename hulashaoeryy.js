@@ -4,7 +4,7 @@
 呼啦少儿英语
 
 [rewrite_local]
-https://apiv2.hula123.com/api/v1/me url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/hulashaoeryy.js
+https://apiv2.hula123.com/api/v1/me url script-response-body https://raw.githubusercontent.com/Yunxingz/Rewrite/main/hulashaoeryy.js
 
 [mitm]
 hostname = apiv2.hula123.com
