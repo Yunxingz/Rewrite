@@ -1,0 +1,19 @@
+#!name=PingMe
+#!desc=获取Cookie，签到
+#!openUrl = 
+#!tag=
+#!icon=https://raw.githubusercontent.com/fishdown/Icon/master/app/PingMe.png
+#!date=
+
+[Mitm]
+hostname = api.pingmeapp.net
+
+[Script]
+cron {cron} script-path=PingMe.js, img-url=https://raw.githubusercontent.com/fishdown/Icon/master/app/PingMe.png, timeout=60, enable={sw},tag=PingMe
+
+http-request ^https:\/\/api\.pingmeapp\.net\/app\/queryBalanceAndBonus script-path=PingMe.js, requires-body=true, timeout=60,  img-url=https://raw.githubusercontent.com/fishdown/Icon/master/app/PingMe.png, enable={sw2},tag=PingMe Cookie
+
+[Argument]
+sw=switch,true,tag=PingMe Cron,desc=
+sw2=switch,false,tag=PingMe Cookie,desc=
+cron = input, "30 8,20 * * *", tag=Cron时间, desc=
